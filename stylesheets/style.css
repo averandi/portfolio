@@ -64,13 +64,23 @@ a.skip-main:focus {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+
+
 }
+@media(prefers-reduced-motion: reduce){
+  @keyframes tada{
+    animation:none;
+  }
+} 
+
+
 
 
 /* ----------Desktop layout 
 @media only screen and (min-width: 1024px){
   
-}----------*/
+}
+
 /* animation from https://daneden.github.io/animate.css/ */
 
 #sitelogo {
@@ -370,6 +380,13 @@ h1 {
   to {transform:scale(1)}
 }
 
+@media(prefers-reduced-motion: reduce){
+  @keyframes zoom{
+    animation:none;
+  }
+} 
+
+
 /* The Close Button */
 .close {
   position: absolute;
@@ -459,26 +476,102 @@ footer{
 }
 
 
+/*MEDIA QUERIES */
 /*small screen */
 /* For mobile phones */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width:800px) {
   /* For mobile phones: */
   /* Navbar FLEX*/
   header{
-    
     flex-direction: column;
   }
-
-  .my-nav{
-    flex-direction: column;
-  }
-
-  .my-nav a{
-    padding: 10px;
-  }
-
- 
+ .nav-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; 
+  list-style: none;
+  font-size: 20px;
 }
+
+.footer-nav-links{
+  display: none;
+}
+
+
+.nav-links .current {
+  color: white;
+  border: 3px solid black;
+  
+}
+.gridcontainers {
+  display: grid;
+  grid-template-columns: auto auto;
+  /*background-color: #2196F3;*/
+  grid-gap: 5px;
+  padding: 5px 5px 5px 5px;
+}
+.ava-welcome-img{
+    display: block;
+    /*margin-left: auto;
+    margin-right: auto; */
+    height: 100px;
+    width: auto;
+    justify-self: start;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+}
+
+}
+}
+.poem-pics{
+  display: flex;
+  flex-direction: : column;
+  align-items: center;
+  justify-content: center; 
+  
+}
+
+.poem{
+  height: 600px;
+  width: auto;
+  margin: 10px 10px 10px 10px;
+  border: 6px dotted black;
+}
+
+
+
+/* image modal, code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Add Animation */
+.modal-content{  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 
@@ -494,10 +587,14 @@ footer{
     flex-direction: column;
   }
 
-  .my-nav a{
+  .my-nav{
     padding: 10px;
   }
 
  
+}
+
+@media only screen and (min-width: 1024px){
+
 }
 
