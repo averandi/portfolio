@@ -97,7 +97,7 @@ a.skip-main:focus {
 .gridcontainers {
   display: grid;
   grid-template-columns: auto auto auto;
-  /*background-color: #2196F3;*/
+ /* background-color: #2196F3;*/
   grid-gap: 10px;
   padding: 10px 10px 10px 10px;
 }
@@ -120,7 +120,19 @@ a.skip-main:focus {
     grid-row-start: 1;
     grid-row-end: 3;  
 }
-
+.letsconnect{
+    display: block;
+    align-self: left;
+    /*margin-left: auto;
+    margin-right: auto; */
+    justify-self: start;
+    margin-bottom: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+}
+#instagramicon, #linkedinicon{
+  align-content: left;
+}
 /* hit the floor text effect listed as requirement 13, https://cssnewbie.com/10-beautiful-css-text-effects/#.XYbceJNKjOR */
 .pheader{
   color: #691B4A;
@@ -143,6 +155,7 @@ a.skip-main:focus {
 }
 /*flipcard, help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card*/
 .flip-card {
+  align-content: left;
   background-color: transparent;
   width: 520px;
   height: 620px;
@@ -219,7 +232,7 @@ header{
 
 #sitelogo {
   display: flex;
-  margin-left: auto;
+  margin-left: 30px;
   margin-right: auto;
   width: 200px;
   height: auto;
@@ -248,13 +261,16 @@ header{
 
 
 .nav-links a:hover, a:focus {
-  color: white;
+  color: #383838;
+  font-weight:bold;
   
 }
 
 .nav-links .current {
-  color: white;
+  color: #383838;
+  font-weight:bold;
   border: 3px solid black;
+  font-size: 20px;
   
 }
 
@@ -459,7 +475,7 @@ input[type=submit]:hover {
 }
 
 .container {
-  width:600px;
+  width:500px;
   height: auto;
   margin: auto;
   margin-bottom: 10px;
@@ -479,122 +495,165 @@ footer{
 /*MEDIA QUERIES */
 /*small screen */
 /* For mobile phones */
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 600px) {
   /* For mobile phones: */
   /* Navbar FLEX*/
+  #sitelogo {
+  height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  @keyframes tada {
+    animation: none;
+  }
+
   header{
+    display: flex;
     flex-direction: column;
   }
- .nav-links{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; 
-  list-style: none;
-  font-size: 20px;
-}
+  .my-nav{
+    display: flex;
+    flex-flow: column-wrap;
+  }
 
-.footer-nav-links{
+  .my-nav a{
+    padding: 10px;
+  }
+  .footer-nav-links{
   display: none;
-}
 
-
-.nav-links .current {
-  color: white;
-  border: 3px solid black;
-  
 }
 .gridcontainers {
   display: grid;
-  grid-template-columns: auto auto;
-  /*background-color: #2196F3;*/
-  grid-gap: 5px;
-  padding: 5px 5px 5px 5px;
+  grid-template-columns: auto;
+  align-self: auto;
+}}
+#homeme{
+  height: 150px;
+  width: auto;
+}
+@media only screen and (max-width: 700px) {
+  /* For mobile phones: */
+  /* Navbar FLEX*/
+  #sitelogo {
+  height: 30%;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  @keyframes tada {
+    animation: none;
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+  .my-nav{
+    display: flex;
+    flex-flow: column-wrap;
+  }
+
+  .my-nav a{
+    padding: 10px;
+  }
+  .footer-nav-links{
+  display: none;
+
+}
+#homeme{
+  height: 150px;
+  width: auto;
 }
 .ava-welcome-img{
     display: block;
     /*margin-left: auto;
     margin-right: auto; */
-    height: 100px;
-    width: auto;
+    justify-self: start;
+    margin:auto;
+    margin-bottom: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+}
+.gridcontainers {
+  display: grid;
+  grid-template-columns: auto;
+  align-self: auto;
+}
+#mytext{
+  font-size: 20px;
+}
+.parallax{
+  display: none;}
+}
+
+@media only screen and (min-width: 800px) {
+  .ava-welcome-img{
+    display: none; 
+
+}
+.gridcontainers {
+  display: grid;
+  grid-template-columns: auto;
+  align-self: auto;
+}
+#mytext{
+  font-size: 20px;
+}
+.parallax{
+  display: none;}
+
+}
+
+
+@media only screen and (min-width: 1024px){
+.ava-welcome-img{
+    display: block;
+    /*margin-left: auto;
+    margin-right: auto; */
     justify-self: start;
     margin-left: 60px;
     margin-bottom: 10px;
     grid-row-start: 1;
     grid-row-end: 2;  
 }
-
-}
-}
-.poem-pics{
-  display: flex;
-  flex-direction: : column;
-  align-items: center;
-  justify-content: center; 
-  
+.gridcontainers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
-.poem{
-  height: 600px;
-  width: auto;
-  margin: 10px 10px 10px 10px;
-  border: 6px dotted black;
+#mytext{
+  font-size: 16px;
+}
+.flip-card {
+  align-content: left;
+  background-color: transparent;
+  width: 520px;
+  height: 620px;
+  perspective: 1000px;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
-
-
-/* image modal, code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img */
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 50px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
+.parallax{
   display: block;
-  width: 80%;
-  max-width: 900px;
-}
-
-/* Add Animation */
-.modal-content{  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-
-/*medium screen */
-/* For tablets */
-@media only screen and (min-width: 600px) {
-  header{
-
-    flex-direction: column;
-  }
-
-  .my-nav{
-    flex-direction: column;
-  }
-
-  .my-nav{
-    padding: 10px;
-  }
-
- 
-}
-
-@media only screen and (min-width: 1024px){
+background-image: url('../images/para2.jpg');
+/* Set a specific height */
+  min-height: 400px;
+  margin-left: 50px;
+  margin-right:50px;
+  border: 2px solid black;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
+}
