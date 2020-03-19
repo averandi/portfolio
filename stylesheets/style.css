@@ -189,6 +189,7 @@ a.skip-main:focus {
 
 .flip-card-front {
   background-color: transparent;
+  width: auto;
   color: black;
 }
 
@@ -202,6 +203,8 @@ a.skip-main:focus {
 
 #homeme{
   border-radius: 50%;
+  height:250px;
+  width:auto;
  }
 
 .paras{
@@ -495,7 +498,7 @@ footer{
 /*MEDIA QUERIES */
 /*small screen */
 /* For mobile phones */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   /* For mobile phones: */
   /* Navbar FLEX*/
   #sitelogo {
@@ -655,5 +658,10 @@ background-image: url('../images/para2.jpg');
   background-size: cover;
 
 }
+#homeme{
+  border-radius: 50%;
+  height:250px;
+  width:auto;
+ }
 
 }
